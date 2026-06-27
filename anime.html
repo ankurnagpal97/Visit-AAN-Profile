@@ -349,6 +349,27 @@ body.sealed main,body.sealed header,body.sealed nav{animation:sealsuck 1.6s ease
   box-shadow:0 0 14px var(--blue);opacity:.75;
 }
 
+/* INTEL REPORTS (recommendations) */
+.testimonialGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px}
+.testCard{
+  background:#fff;border:4px solid var(--ink);box-shadow:8px 8px 0 var(--ink);
+  padding:28px 24px 22px;position:relative;overflow:hidden;
+  transition:transform .25s,box-shadow .25s;
+}
+.testCard:hover{transform:translate(-3px,-4px) rotate(-.4deg);box-shadow:12px 12px 0 var(--ink)}
+.testCard::before{
+  content:'"';font-family:var(--display);font-size:7rem;color:var(--orange);
+  position:absolute;top:-18px;left:10px;line-height:1;opacity:.18;pointer-events:none;
+}
+.testName{font-family:var(--display);font-size:1.25rem;letter-spacing:.06em;color:var(--ink);margin-bottom:3px}
+.testRole{font-weight:700;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);margin-bottom:8px}
+.testDate{
+  display:inline-block;font-weight:700;font-size:.7rem;letter-spacing:.22em;
+  background:var(--gold);color:var(--ink);padding:2px 12px;transform:skewX(-8deg);
+  border:2px solid var(--ink);margin-bottom:14px;
+}
+.testText{font-size:.92rem;font-weight:600;color:#3a3320;line-height:1.75;position:relative;z-index:1}
+
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
 }
@@ -372,6 +393,7 @@ body.sealed main,body.sealed header,body.sealed nav{animation:sealsuck 1.6s ease
     <a href="#bounties">Bounties</a>
     <a href="#power">Power</a>
     <a href="#training">Training</a>
+    <a href="#intel">Intel</a>
     <a href="#crew">Join Crew</a>
     <button id="flashBtn">⚡ FLASH STEP</button>
   </div>
@@ -382,7 +404,7 @@ body.sealed main,body.sealed header,body.sealed nav{animation:sealsuck 1.6s ease
     <span class="eyebrow">CHAPTER 001 · HYDERABAD ARC</span>
     <h1>ANKUR A<br>NAGPAL</h1>
     <p class="role">Senior Data Scientist — <span class="typed" id="typed"></span><span class="caret"></span></p>
-    <p class="heroSub">7.5+ years of grinding through training arcs across industries — time-series forecasting, ML, NLP and Generative AI (RAG) — a protagonist who turns business chaos into production-grade victories. His ego? Backed by 95%+ forecast accuracy.</p>
+    <p class="heroSub">8+ years of grinding through training arcs across industries — time-series forecasting, ML, NLP and Generative AI (RAG) — a protagonist who turns business chaos into production-grade victories. His ego? Backed by 95%+ forecast accuracy.</p>
     <div class="heroBtns">
       <a class="btn primary" href="#bounties">READ THE MANGA</a>
       <a class="btn ghost" href="https://www.linkedin.com/in/ankur-a-nagpal" target="_blank" rel="noopener">LINKEDIN ↗</a>
@@ -402,16 +424,33 @@ body.sealed main,body.sealed header,body.sealed nav{animation:sealsuck 1.6s ease
 <main>
 <section id="bounties">
   <div class="secHead reveal"><span class="chHead">CH. 01</span><h2>WANTED: CAREER BOUNTIES</h2></div>
-  <p class="secSub reveal">Three sagas. Three crews. The bounty keeps climbing.</p>
+  <p class="secSub reveal">Four sagas. Four crews. The bounty keeps climbing.</p>
 
   <div class="posterGrid">
+
     <article class="poster reveal">
-      <span class="stamp">ACTIVE</span>
+      <span class="stamp">CURRENT ARC</span>
+      <div class="wanted">WANTED</div>
+      <div class="dead">DEAD OR ALIVE</div>
+      <div class="mugshot">🍔</div>
+      <h3>THE TOPLINE TITAN</h3>
+      <p class="crew">McDonald's Crew · Data Scientist 3 · May 2026 → Present</p>
+      <ul>
+        <li>Ensemble topline forecasting — ARIMA, SARIMA, ETS, Prophet, Theta, LightGBM, XGBoost, CatBoost, Chronos, TimesFM, DeepAR, N-BEATS & TFT</li>
+        <li>Production-grade forecasting pipelines powering strategic planning across the restaurant network</li>
+        <li>GenAI and LLM integration driving automated business decisions</li>
+        <li>Cross-functional missions translating complex model outputs into executive-level strategy</li>
+      </ul>
+      <div class="bounty"><small>BOUNTY</small>฿ 120,000,000</div>
+    </article>
+
+    <article class="poster reveal">
+      <span class="stamp">LEGEND</span>
       <div class="wanted">WANTED</div>
       <div class="dead">DEAD OR ALIVE</div>
       <div class="mugshot">🥤</div>
       <h3>THE FORECAST KING</h3>
-      <p class="crew">PepsiCo Crew · Senior Data Scientist · Dec 2023 → Now</p>
+      <p class="crew">PepsiCo Crew · Senior Data Scientist · Dec 2023 → May 2026</p>
       <ul>
         <li>End-to-end time-series forecasting powering strategic planning & resource allocation</li>
         <li>95%+ accuracy with Prophet, XGBoost, ARIMA/ARIMAX across error metrics</li>
@@ -504,6 +543,36 @@ body.sealed main,body.sealed header,body.sealed nav{animation:sealsuck 1.6s ease
       <span class="chip">🗣 Sindhi</span>
       <span class="chip">🗣 Telugu</span>
     </div>
+  </div>
+</section>
+
+<section id="intel">
+  <div class="secHead reveal"><span class="chHead">CH. 04</span><h2>INTEL REPORTS</h2></div>
+  <p class="secSub reveal">Testimonials from crew members and commanders — straight from the battlefield.</p>
+
+  <div class="testimonialGrid">
+
+    <div class="testCard reveal">
+      <p class="testName">Samir Kanaan Izquierdo</p>
+      <p class="testRole">Data Science Manager · PepsiCo</p>
+      <span class="testDate">JAN 2025 · MANAGED DIRECTLY</span>
+      <p class="testText">"Ankur moved quickly from new joiner to our project to the technical expert, the one that knows how everything works or how can be fixed. He combines excellent technical skills (Python/SQL/Spark, MLOPS, DataOps) with ample Data Science understanding. And, on another front, he has very good communication skills, is always helping his teammates, and is the first to jump in to help with urgent issues. Very proud of having him in my team!"</p>
+    </div>
+
+    <div class="testCard reveal">
+      <p class="testName">Gopala Krishna B.S.L</p>
+      <p class="testRole">Senior Data Scientist · PepsiCo</p>
+      <span class="testDate">JAN 2025 · SENIOR COLLEAGUE</span>
+      <p class="testText">"It has been an absolute pleasure working with Ankur at Pepsico, where his expertise as a Data Scientist has been nothing short of exceptional. Ankur's analytical mindset, problem-solving skills, and deep understanding of data-driven methodologies make him a standout professional in our field.<br><br>One of Ankur's greatest strengths is his ability to turn complex datasets into actionable insights. Whether it's designing robust machine learning models or developing innovative solutions to challenging business problems, Ankur consistently exceeds expectations.<br><br>Beyond his technical skills, Ankur is an incredible team player — always approachable, willing to share his knowledge, and supportive of his colleagues' growth. I wholeheartedly recommend him as an asset to any team or organization."</p>
+    </div>
+
+    <div class="testCard reveal">
+      <p class="testName">Jordan Crabbe</p>
+      <p class="testRole">Data Engineering & Analytics · Rio Tinto</p>
+      <span class="testDate">OCT 2022 · MANAGED DIRECTLY</span>
+      <p class="testText">"Ankur is a relentlessly driven worker who has the knowledge, understanding and creativity to not only execute tasks but to generate ideas about potential new features and how they might be carried out within the context of a project. He specialises in SQL, Python, and Power BI however he has demonstrated the ability to pick up new skills rapidly in cases where we have had to work with legacy systems.<br><br>I have been most impressed by Ankur's ability to fit into teams with a diversity of backgrounds and cultural differences. He has made positive impressions on everyone he's worked with on our team."</p>
+    </div>
+
   </div>
 </section>
 
