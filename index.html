@@ -7,7 +7,8 @@
     'https://ankurnagpal97.github.io/solar-portfolio/',
     'https://ankurnagpal97.github.io/Visit-AAN-Profile/anime.html'
   ];
-  location.replace(sites[Math.random() < 0.5 ? 0 : 1]);
+  const dest = sites[Math.random() < 0.5 ? 0 : 1];
+  location.replace(dest + window.location.search);
 </script>
 </body>
 </html>
