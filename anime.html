@@ -309,6 +309,25 @@ section{position:relative;padding:100px 6vw;max-width:1180px;margin:0 auto}
 }
 .chip:hover{background:var(--gold);transform:translate(-2px,-2px) rotate(-1deg);box-shadow:6px 6px 0 var(--ink)}
 
+/* IRON BODY ARC (gym stats) */
+.ironGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.ironCard{
+  background:#fff;border:3px solid var(--ink);box-shadow:6px 6px 0 var(--ink);
+  padding:18px 20px;transition:transform .2s,box-shadow .2s;position:relative;overflow:hidden;
+}
+.ironCard:hover{transform:translate(-2px,-3px) rotate(-.3deg);box-shadow:10px 10px 0 var(--ink)}
+.ironCard .iTop{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+.ironCard .iIcon{font-size:1.8rem;line-height:1}
+.ironCard .iName{font-weight:700;font-size:1rem;letter-spacing:.02em;color:var(--ink)}
+.ironCard .iValue{font-family:var(--display);font-size:1.5rem;color:var(--orange);letter-spacing:.04em;margin-bottom:4px}
+.ironCard .iSub{font-size:.8rem;font-weight:600;color:#6a6d80;margin-bottom:10px}
+.ironBar{height:12px;background:#e7e3d4;border:2px solid var(--ink);position:relative;overflow:hidden}
+.ironBar .iFill{
+  height:100%;width:0;
+  background:repeating-linear-gradient(45deg,var(--blue),var(--blue) 8px,#7cc4ff 8px,#7cc4ff 16px);
+  transition:width 1.4s cubic-bezier(.2,.8,.2,1);
+}
+
 /* contact = crew recruitment */
 .contactWrap{
   text-align:center;background:var(--ink);color:#fff;
@@ -427,6 +446,7 @@ main section{position:relative;z-index:1}
     <a href="#power">Power</a>
     <a href="#training">Training</a>
     <a href="#intel">Intel</a>
+    <a href="#ironbody">Iron Body</a>
     <a href="#crew">Join Crew</a>
     <button id="flashBtn">⚡ FLASH STEP</button>
   </div>
@@ -633,6 +653,70 @@ main section{position:relative;z-index:1}
       <p class="testRole">Data Engineering & Analytics · Rio Tinto</p>
       <span class="testDate">OCT 2022 · MANAGED DIRECTLY</span>
       <p class="testText">"Ankur is a relentlessly driven worker who has the knowledge, understanding and creativity to not only execute tasks but to generate ideas about potential new features and how they might be carried out within the context of a project. He specialises in SQL, Python, and Power BI however he has demonstrated the ability to pick up new skills rapidly in cases where we have had to work with legacy systems.<br><br>I have been most impressed by Ankur's ability to fit into teams with a diversity of backgrounds and cultural differences. He has made positive impressions on everyone he's worked with on our team."</p>
+    </div>
+
+  </div>
+</section>
+
+<section id="ironbody">
+  <div class="secHead reveal"><span class="chHead">CH. 05</span><h2>THE IRON BODY ARC</h2></div>
+  <p class="secSub reveal">A protagonist must train the body as hard as the mind. These are the current readings.</p>
+  <div class="ironGrid">
+
+    <div class="ironCard reveal">
+      <div class="iTop"><span class="iIcon">🏋️</span><span class="iName">Dumbbell Bench Press</span></div>
+      <div class="iValue">65 kg</div>
+      <div class="iSub">32.5 kg × 2 dumbbells</div>
+      <div class="ironBar"><div class="iFill" data-w="65"></div></div>
+    </div>
+
+    <div class="ironCard reveal">
+      <div class="iTop"><span class="iIcon">🪵</span><span class="iName">Barbell Flat Press</span></div>
+      <div class="iValue">70 kg</div>
+      <div class="iSub">flat bench</div>
+      <div class="ironBar"><div class="iFill" data-w="70"></div></div>
+    </div>
+
+    <div class="ironCard reveal">
+      <div class="iTop"><span class="iIcon">💪</span><span class="iName">Overhead Press</span></div>
+      <div class="iValue">50 kg</div>
+      <div class="iSub">25 kg × 2 dumbbells</div>
+      <div class="ironBar"><div class="iFill" data-w="72"></div></div>
+    </div>
+
+    <div class="ironCard reveal">
+      <div class="iTop"><span class="iIcon">⬆️</span><span class="iName">Weighted Pull-ups</span></div>
+      <div class="iValue">+10 kg</div>
+      <div class="iSub">5 reps</div>
+      <div class="ironBar"><div class="iFill" data-w="75"></div></div>
+    </div>
+
+    <div class="ironCard reveal">
+      <div class="iTop"><span class="iIcon">🏃</span><span class="iName">5K Run PR</span></div>
+      <div class="iValue">22:48</div>
+      <div class="iSub">mins · personal record</div>
+      <div class="ironBar"><div class="iFill" data-w="80"></div></div>
+    </div>
+
+    <div class="ironCard reveal">
+      <div class="iTop"><span class="iIcon">🛤️</span><span class="iName">10K Run PR</span></div>
+      <div class="iValue">50:12</div>
+      <div class="iSub">mins · personal record</div>
+      <div class="ironBar"><div class="iFill" data-w="78"></div></div>
+    </div>
+
+    <div class="ironCard reveal">
+      <div class="iTop"><span class="iIcon">🦵</span><span class="iName">Squats</span></div>
+      <div class="iValue">100 kg</div>
+      <div class="iSub">1 rep max</div>
+      <div class="ironBar"><div class="iFill" data-w="82"></div></div>
+    </div>
+
+    <div class="ironCard reveal">
+      <div class="iTop"><span class="iIcon">🏊</span><span class="iName">Swimming</span></div>
+      <div class="iValue">125 m</div>
+      <div class="iSub">25 m × 5 laps</div>
+      <div class="ironBar"><div class="iFill" data-w="60"></div></div>
     </div>
 
   </div>
@@ -991,7 +1075,7 @@ const io = new IntersectionObserver(entries => {
   entries.forEach(en => {
     if(!en.isIntersecting) return;
     en.target.classList.add('in');
-    en.target.querySelectorAll('.fill').forEach(f => f.style.width = f.dataset.w+'%');
+    en.target.querySelectorAll('.fill,.iFill').forEach(f => f.style.width = f.dataset.w+'%');
     en.target.querySelectorAll('.pct').forEach(pct => {
       const target = +pct.dataset.n * 100;             // 100% → 10,000 power
       let v = 0;
